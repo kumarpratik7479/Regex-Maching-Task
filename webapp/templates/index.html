@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Matcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Regex Test String Matcher</h1>
+        <form action="/results" method="post">
+            <label for="regex">Regex:</label>
+            <input type="text" id="regex" name="regex" required><br><br>
+            <label for="test_string">Test String:</label>
+            <textarea id="test_string" name="test_string" rows="4" cols="50" required></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <hr>
+
+        <h2>Email Validation</h2>
+        <form action="/validate-email" method="post">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <input type="submit" value="Validate Email">
+        </form>
+        {% if email_result is defined %}
+            {% if email_result %}
+                <p class="valid">The email is valid.</p>
+            {% else %}
+                <p class="invalid">The email is not valid.</p>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <title>Email Validation</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Email Validation</h1>
+        {% if is_valid %}
+            <p>The email is valid.</p>
+        {% else %}
+            <p>The email is not valid.</p>
+        {% endif %}
+        <a href="/">Try again</a>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Email Validation</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Email Validation</h1>
+        {% if is_valid %}
+            <p>The email is valid.</p>
+        {% else %}
+            <p>The email is not valid.</p>
+        {% endif %}
+        <a href="/">Try again</a>
+    </div>
+</body>
+</html>
